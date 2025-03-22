@@ -1,0 +1,14 @@
+
+FROM openjdk:17-jdk-alpine
+
+
+WORKDIR /app
+
+
+COPY target/backend.jar app.jar
+
+
+EXPOSE 8080
+
+# Comando para executar a aplicação
+ENTRYPOINT ["java","-jar","/app/app.jar"]
